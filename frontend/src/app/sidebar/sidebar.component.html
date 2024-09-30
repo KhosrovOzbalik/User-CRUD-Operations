@@ -1,0 +1,56 @@
+<div
+  class="sidebar border-3 border-primary h-screen m-0 p-0 flex flex-column overflow-y-auto"
+>
+  <div class="flex flex-column row-gap-6 align-items-start my-6">
+    <div class="p-px-2">
+      <button
+        pButton
+        [outlined]="true"
+        type="button"
+        label="Add New User"
+        icon="pi pi-check"
+        (click)="emitStateChange(State.AddUser)"
+      ></button>
+    </div>
+    <div class="p-px-2">
+      <button
+        pButton
+        [outlined]="true"
+        type="button"
+        label="Search User"
+        icon="pi pi-times"
+        (click)="emitStateChange(State.SearchUser)"
+      ></button>
+    </div>
+    <div class="p-px-2">
+      <button
+        pButton
+        [outlined]="true"
+        type="button"
+        label="Update User"
+        icon="pi pi-search"
+        (click)="emitStateChange(State.UpdateUser)"
+      ></button>
+    </div>
+    <div class="p-px-2">
+      <button
+        pButton
+        [outlined]="true"
+        type="button"
+        label="Remove User"
+        icon="pi pi-refresh"
+        (click)="emitStateChange(State.RemoveUser)"
+      ></button>
+    </div>
+    <div class="p-px-2">
+      <button
+        pButton
+        [outlined]="true"
+        type="button"
+        label="User List"
+        icon="pi pi-refresh"
+        (click)="emitStateChange(State.UserList)"
+      ></button>
+    </div>
+  </div>
+</div>

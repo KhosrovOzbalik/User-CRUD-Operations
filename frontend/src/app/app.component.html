@@ -1,0 +1,15 @@
+<div class="text-center p-3 border-round-sm bg-primary font-bold">
+  User Tracking System
+</div>
+<div class="grid">
+  <div class="col-6 col-offset-2 mt-6">
+    <app-add-new-user *ngIf="state === State.AddUser" />
+    <app-search-user *ngIf="state === State.SearchUser" />
+    <app-update-user *ngIf="state === State.UpdateUser" />
+    <app-remove-user *ngIf="state === State.RemoveUser" />
+    <app-user-list *ngIf="state === State.UserList" />
+  </div>
+  <div class="col-4">
+    <app-sidebar (stateChange)="onSidebarButton($event)" />
+  </div>
+</div>

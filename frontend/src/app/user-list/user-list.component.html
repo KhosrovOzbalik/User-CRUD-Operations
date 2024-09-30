@@ -1,0 +1,23 @@
+<h2>User List</h2>
+
+<p-table [value]="users" responsiveLayout="scroll">
+  <!-- Define the table header -->
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Age</th>
+      <th>Id</th>
+    </tr>
+  </ng-template>
+
+  <!-- Define the table body -->
+  <ng-template pTemplate="body" let-user>
+    <tr>
+      <td>{{ user.name }}</td>
+      <td>{{ user.surname }}</td>
+      <td>{{ user.age }}</td>
+      <td>{{ user._id }}</td>
+    </tr>
+  </ng-template>
+</p-table>

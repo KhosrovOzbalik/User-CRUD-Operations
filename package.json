@@ -1,0 +1,14 @@
+{
+  "name": "parent-project",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "concurrently \"npm start --prefix ./frontend\" \"npm run start:dev --prefix ./backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  },
+  "dependencies": {
+    "parent-project": "file:"
+  }
+}

@@ -1,0 +1,65 @@
+<div class="surface-card p-4 shadow-2 border-round w-full lg:w-6">
+  <div>
+    <!-- User ID input field (to identify the user to update) -->
+    <label for="id" class="block text-900 font-medium mb-2">User ID</label>
+    <input
+      id="id"
+      type="text"
+      placeholder="User ID"
+      pInputText
+      [(ngModel)]="id"
+      class="w-full mb-3"
+      required
+    />
+
+    <!-- Name input field -->
+    <label for="name" class="block text-900 font-medium mb-2">Name</label>
+    <input
+      id="name"
+      type="text"
+      placeholder="Name"
+      pInputText
+      [(ngModel)]="name"
+      class="w-full mb-3"
+    />
+
+    <!-- Surname input field -->
+    <label for="surname" class="block text-900 font-medium mb-2">Surname</label>
+    <input
+      id="surname"
+      type="text"
+      placeholder="Surname"
+      pInputText
+      [(ngModel)]="surname"
+      class="w-full mb-3"
+    />
+
+    <!-- Age input field -->
+    <label for="age" class="block text-900 font-medium mb-2">Age</label>
+    <input
+      id="age"
+      type="number"
+      placeholder="Age"
+      pInputText
+      [(ngModel)]="age"
+      class="w-full mb-3"
+    />
+
+    <!-- Submit button for updating user -->
+    <button
+      pButton
+      pRipple
+      label="Update"
+      icon="pi pi-user-edit"
+      class="w-full"
+      (click)="userUpdated()"
+      [disabled]="!id"
+    ></button>
+
+    <!-- Success message -->
+    <p *ngIf="successMessage" class="text-green-600">{{ successMessage }}</p>
+
+    <!-- Error message -->
+    <p *ngIf="errorMessage" class="text-red-600">{{ errorMessage }}</p>
+  </div>
+</div>
